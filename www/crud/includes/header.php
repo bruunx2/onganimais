@@ -2,7 +2,7 @@
   <html>
     <head>
         <meta charset="utf-8">
-        <title> Sistema de cadastro de clientes</title>
+        <title> Sistema de cadastro de Animais</title>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
