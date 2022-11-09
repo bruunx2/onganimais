@@ -1,6 +1,6 @@
 <?php
 // Conexão
-include_once 'php_action/db_connect.php';
+include_once 'database/db_connect.php';
 // Header
 include_once 'includes/header.php';
 // Mensagem
@@ -13,11 +13,11 @@ include_once 'includes/mensage.php';
         <table class="striped">
             <thead>
                 <tr>
-                    <th>Nome: </th>
-                    <th>Idade: </th>
-                    <th>Sexo: </th>
-                    <th>Raça: </th>
-                    <th>Porte: </th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                    <th>Raça</th>
+                    <th>Porte</th>
                 </tr> 
             </thead>
         <tbody>
@@ -47,7 +47,7 @@ include_once 'includes/mensage.php';
                         </div>
                         <div class="modal-footer">
                         
-                        <form action="php_action/delete.php" method="POST">
+                        <form action="database/animal/delete.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
                             <button type="submit" name="btn-deletar" id="btn-deletar" class="btn red">Sim, deletar!</button>
                             

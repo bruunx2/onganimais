@@ -2,7 +2,7 @@
 // Sessão
 session_start();
 // Conexão
-require_once 'db_connect.php';
+require_once '../db_connect.php';
 
 if(isset($_POST['btn-editar'])):
     $nome = mysqli_escape_string($connect, $_POST['nome']);
@@ -17,10 +17,10 @@ if(isset($_POST['btn-editar'])):
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Atualizado com Sucesso";
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Atualizar";
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     endif;
 endif;
 ?>

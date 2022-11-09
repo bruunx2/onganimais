@@ -2,7 +2,7 @@
 // Sessão
 session_start();
 // Conexão
-require_once 'db_connect.php';
+require_once '../db_connect.php';
 // Clear
 function clear($input) {
     global $connect;
@@ -20,18 +20,14 @@ if(isset($_POST['btn-cadastrar'])):
     $raca = clear($_POST['raca']);
     $porte = clear($_POST['porte']);
     
-    
-    
-
     $sql = "INSERT INTO animal (nome, idade, sexo, raca, porte) VALUES ('$nome', '$idade', '$sexo','$raca','$porte')";    
-
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso";
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Cadastrar";
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     endif;
 endif;
 ?>

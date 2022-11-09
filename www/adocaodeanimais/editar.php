@@ -1,6 +1,6 @@
 <?php
 // Conexão
-include_once 'php_action/db_connect.php';
+include_once 'database/db_connect.php';
 // Header
 include_once 'includes/header.php';
 // Select
@@ -16,7 +16,7 @@ endif;
 <div class="row"> 
     <div class="col s12 m6 push-m3">
         <h3 class="light"> Editar Animal </h3>
-        <form action="php_action/update.php" method="POST">
+        <form action="database/animal/update.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
             <div class="input-field col s12">
                 <input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>">

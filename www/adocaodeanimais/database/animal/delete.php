@@ -2,7 +2,7 @@
 // Sessão
 session_start();
 // Conexão
-require_once 'db_connect.php';
+require_once '../db_connect.php';
 
 if(isset($_POST['btn-deletar'])):    
 
@@ -12,10 +12,10 @@ if(isset($_POST['btn-deletar'])):
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Deletado com Sucesso";
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Deletar";
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     endif;
 endif;
 ?>
