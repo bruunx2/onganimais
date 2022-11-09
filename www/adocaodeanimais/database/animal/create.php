@@ -24,10 +24,10 @@ if(isset($_POST['btn-cadastrar'])):
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso";
-        header('Location: ../../index.php');
+        header('Location: ../../views/animal/list.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Cadastrar";
-        header('Location: ../../index.php');
+        header('Location: ../../views/animal/list.php');
     endif;
 endif;
 ?>

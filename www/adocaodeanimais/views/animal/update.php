@@ -1,8 +1,8 @@
 <?php
 // Conexão
-include_once 'database/db_connect.php';
+include_once '../../database/db_connect.php';
 // Header
-include_once 'includes/header.php';
+include_once '../../includes/header.php';
 // Select
 if (isset($_GET['id'])):
     $id = mysqli_escape_string($connect,$_GET['id']);
@@ -16,7 +16,7 @@ endif;
 <div class="row"> 
     <div class="col s12 m6 push-m3">
         <h3 class="light"> Editar Animal </h3>
-        <form action="database/animal/update.php" method="POST">
+        <form action="../../database/animal/update.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
             <div class="input-field col s12">
                 <input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>">
@@ -44,7 +44,7 @@ endif;
             </div>
 
             <button type="submit" name="btn-editar" id="btn-editar" class="btn">Atualizar</button>
-            <a href="index.php" class="btn green">Lista de Animais</a>
+            <a href="list.php" class="btn green">Lista de Animais</a>
         </form>
         
     </div>
@@ -52,5 +52,5 @@ endif;
 
 <?php
 // Footer
-include_once 'includes/footer.php';
+include_once '../../includes/footer.php';
 ?>
