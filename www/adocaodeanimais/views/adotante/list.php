@@ -16,6 +16,7 @@ include_once '../../includes/mensage.php';
                     <th>Nome</th>
                     <th>Data de nascimento</th>
                     <th>CPF</th>
+                    <th>CEP</th>
                     <th>Logradouro</th>
                     <th>Cidade</th>
                     <th>UF</th>
@@ -34,11 +35,8 @@ include_once '../../includes/mensage.php';
                 ?>
                         <tr>
                             <td><?php echo $dados['nome']; ?></td>
-                            <td><?php echo $dados['data_nascimento']; ?></td>
                             <td><?php echo $dados['cpf']; ?></td>
-                            <td><?php echo $dados['logradouro']; ?></td>
                             <td><?php echo $dados['cidade']; ?></td>
-                            <td><?php echo $dados['uf']; ?></td>
                             <td><?php echo $dados['telefone']; ?></td>
                             <td><?php echo $dados['email']; ?></td>
 
@@ -70,9 +68,6 @@ include_once '../../includes/mensage.php';
                     ?>
 
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>

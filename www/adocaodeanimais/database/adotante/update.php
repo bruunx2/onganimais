@@ -10,6 +10,7 @@ if(isset($_POST['btn-editar'])):
     $cpf = mysqli_escape_string($connect, $_POST['cpf']);
     $logradouro = mysqli_escape_string($connect, $_POST['logradouro']);
     $cidade = mysqli_escape_string($connect, $_POST['cidade']);
+    $bairro = mysqli_escape_string($connect, $_POST['bairro']);
     $uf = mysqli_escape_string($connect, $_POST['uf']);
     $telefone = mysqli_escape_string($connect, $_POST['telefone']);
     $email = mysqli_escape_string($connect, $_POST['email']);
@@ -22,6 +23,7 @@ if(isset($_POST['btn-editar'])):
                                 cpf = '$cpf', 
                                 logradouro = '$logradouro', 
                                 cidade = '$cidade',
+                                bairro = '$bairro',
                                 uf   = '$uf',
                                 telefone = '$telefone',
                                 email = '$email'
