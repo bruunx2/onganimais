@@ -8,14 +8,9 @@
                 <input type="text" name="nome" id="nome">
                 <label for="nome">Nome</label>
             </div>
-            <!-- TODO Diminuir input -->
-            <div class="input-field col s12">
-                <input type="date" name="data_nascimento" id="data_nascimento">
-                <label for="data_nascimento">Data de Nascimento</label>
-            </div>
             <div class="input-field col s12">
                 <input type="text" name="cpf" id="cpf">
-                <label for="sexo">CPF</label>
+                <label for="cpf">CPF</label>
             </div>
             <!-- TODO Diminuir input -->
             <div class="input-field col s12">
@@ -30,11 +25,6 @@
                 <input type="text" name="cep" id="cep">
                 <label for="cep">CEP</label>
             </div>
-            <!-- TODO Diminuir input -->
-            <div class="input-field col s12">
-                <input type="text" name="uf" id="uf">
-                <label for="uf">UF</label>
-            </div>
             <div class="input-field col s12">
                 <input type="text" name="logradouro" id="logradouro">
                 <label for="logradouro">Logradouro</label>
@@ -48,12 +38,17 @@
                 <input type="text" name="bairro" id="bairro">
                 <label for="bairro">Bairro</label>
             </div>
+            <!-- TODO Diminuir input -->
+            <div class="input-field col s12">
+                <input type="text" name="uf" id="uf">
+                <label for="uf">UF</label>
+            </div>
             <div class="input-field col s12">
                 <input type="text" name="cargo" id="cargo">
                 <label for="cargo">Cargo</label>
             </div>
             <button type="submit" name="btn-cadastrar" id="btn-cadastrar" class="btn">Cadastrar</button>
-            <a href="create.php" class="btn green">Lista de Adotantes</a>
+            <a href="list.php" class="btn green">Lista de Funcionarios</a>
         </form>
 
     </div>

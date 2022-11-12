@@ -19,11 +19,7 @@
             <div class="input-field col s12">
                 <input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>">
                 <label for="nome">Nome</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="date" name="data_nascimento" id="data_nascimento" value="<?php echo $dados['data_nascimento']; ?>">
-                <label for="data_nascimento">Data de Nascimento</label>
-            </div>
+            </div>          
             <div class="input-field col s12">
                 <input type="text" name="cpf" id="cpf" value="<?php echo $dados['cpf']; ?>">
                 <label for="cpf">CPF</label>
@@ -41,9 +37,9 @@
                 <label for="cep">CEP</label>
             </div>
             <div class="input-field col s12">
-                <input type="text" name="uf" id="uf" value="<?php echo $dados['uf']; ?>">
-                <label for="uf">UF</label>
-            </div>      
+                <input type="text" name="logradouro" id="logradouro" value="<?php echo $dados['logradouro']; ?>">
+                <label for="logradouro">Logradouro</label>
+            </div>
             <div class="input-field col s12">
                 <input type="text" name="cidade" id="cidade" value="<?php echo $dados['cidade']; ?>">
                 <label for="cidade">Cidade</label>
@@ -52,8 +48,16 @@
                 <input type="text" name="bairro" id="bairro" value="<?php echo $dados['bairro']; ?>">
                 <label for="bairro">Bairro</label>
             </div>
+            <div class="input-field col s12">
+                <input type="text" name="uf" id="uf" value="<?php echo $dados['uf']; ?>">
+                <label for="uf">UF</label>
+            </div>   
+            <div class="input-field col s12">
+                <input type="text" name="cargo" id="cargo" value="<?php echo $dados['cargo']; ?>">
+                <label for="bairro">Cargo</label>
+            </div>
             <button type="submit" name="btn-editar" id="btn-editar" class="btn">Atualizar</button>
-            <a href="list.php" class="btn green">Lista de Animais</a>
+            <a href="list.php" class="btn green">Lista de Funcionarios</a>
         </form>
         
     </div>

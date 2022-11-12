@@ -33,7 +33,7 @@ include_once '../../includes/header.php';
             </div>
 
             <button type="submit" name="btn-cadastrar" id="btn-cadastrar" class="btn">Cadastrar</button>
-            <a href="create.php" class="btn green">Lista de Animais</a>
+            <a href="list.php" class="btn green">Lista de Animais</a>
         </form>
         
     </div>

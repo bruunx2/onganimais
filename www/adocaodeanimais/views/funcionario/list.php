@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col s12 m6 push-m3">
-        <h3 class="light"> Listagem de Adotantes </h3>
+        <h3 class="light"> Listagem de Funcionarios </h3>
         <table class="striped">
             <thead>
                 <tr>
@@ -30,9 +30,9 @@
                         <tr>
                             <td><?php echo $dados['nome']; ?></td>
                             <td><?php echo $dados['cpf']; ?></td>
-                            <td><?php echo $dados['cidade']; ?></td>
                             <td><?php echo $dados['telefone']; ?></td>
                             <td><?php echo $dados['email']; ?></td>
+                            <td><?php echo $dados['cidade']; ?></td>               
                             <td><?php echo $dados['cargo']; ?></td>
 
                             <td><a href="update.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
