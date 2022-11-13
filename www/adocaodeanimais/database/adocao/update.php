@@ -4,8 +4,7 @@ session_start();
 // Conexão
 require_once '../db_connect.php';
 
-if(isset($_POST['btn-editar'])):
-    $id_animal = clear($_POST['id_animal']);
+if(isset($_POST['btn-editar'])):   
     $data_adocao = clear($_POST['data_adocao']);
     $id_adotante = clear($_POST['id_adotante']);
     $id_animal = clear($_POST['id_animal']);
@@ -14,7 +13,6 @@ if(isset($_POST['btn-editar'])):
     $id = mysqli_escape_string($connect, $_POST['id']);
 
     $sql = "UPDATE adocao SET 
-                                id_animal = '$id_animal',
                                 data_adocao = '$data_adocao', 
                                 id_adotante = '$id_adotante', 
                                 id_animal = '$id_animal', 

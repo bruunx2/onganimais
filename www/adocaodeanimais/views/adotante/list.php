@@ -35,10 +35,15 @@ include_once '../../includes/mensage.php';
                 ?>
                         <tr>
                             <td><?php echo $dados['nome']; ?></td>
+                            <td><?php echo $dados['data_nascimento']; ?></td>
                             <td><?php echo $dados['cpf']; ?></td>
+                            <td><?php echo $dados['cep']; ?></td>
+                            <td><?php echo $dados['logradouro']; ?></td>
                             <td><?php echo $dados['cidade']; ?></td>
+                            <td><?php echo $dados['uf']; ?></td>
                             <td><?php echo $dados['telefone']; ?></td>
                             <td><?php echo $dados['email']; ?></td>
+
 
                             <td><a href="update.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
                             <td><a href="#modal <?php echo $dados['id']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
@@ -70,6 +75,9 @@ include_once '../../includes/mensage.php';
                     <tr>
                         <td>-</td>
                         <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td> 
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>

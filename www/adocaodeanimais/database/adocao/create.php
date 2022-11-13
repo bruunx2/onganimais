@@ -14,15 +14,14 @@ function clear($input) {
 }
 
 if(isset($_POST['btn-cadastrar'])):
-    $id_animal = clear($_POST['id_animal']);
     $data_adocao = clear($_POST['data_adocao']);
     $id_adotante = clear($_POST['id_adotante']);
     $id_animal = clear($_POST['id_animal']);
-    $id_funcionario = clear($_POST['id_funcionario']);
+    $id_funcionario = clear($_POST['id_funcionario']);    
     
     
     $sql = "INSERT INTO adocao (data_adocao,id_adotante, id_animal, id_funcionario)
-            VALUES ('$id_animal','$data_adocao','$id_adotante','$id_animal','$id_funcionario')";   
+            VALUES ('$data_adocao','$id_adotante','$id_animal','$id_funcionario')";   
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso";

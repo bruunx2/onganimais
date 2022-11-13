@@ -27,7 +27,7 @@ if(isset($_POST['btn-cadastrar'])):
 
     
     $sql = "INSERT INTO adotante (nome, data_nascimento, cpf, cep, logradouro, cidade, bairro,  uf, telefone, email)
-            VALUES ('$nome', '$data_nascimento', '$cpf', '$cep' , '$lougradouro','$cidade' , '$bairro', '$uf', '$telefone', '$email')";   
+            VALUES ('$nome', '$data_nascimento', '$cpf', '$cep' , '$logradouro','$cidade' , '$bairro', '$uf', '$telefone', '$email')";   
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso";

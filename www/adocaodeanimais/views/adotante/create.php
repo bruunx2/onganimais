@@ -14,7 +14,27 @@
             </div>
             <div class="input-field col s12">
                 <input type="text" name="cpf" id="cpf">
-                <label for="sexo">CPF</label>
+                <label for="cpf">CPF</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="cep" id="cep">
+                <label for="cep">CEP</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="logradouro" id="logradouro">
+                <label for="logradouro">Logradouro</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="cidade" id="cidade">
+                <label for="cidade">Cidade</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="uf" id="uf">
+                <label for="uf">UF</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="bairro" id="bairro">
+                <label for="bairro">Bairro</label>
             </div>
             <div class="input-field col s12">
                 <input type="text" name="telefone" id="telefone">
@@ -23,26 +43,6 @@
             <div class="input-field col s12">
                 <input type="text" name="email" id="email">
                 <label for="email">Email</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="text" name="cep" id="cep">
-                <label for="cep">CEP</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="text" name="uf" id="uf">
-                <label for="uf">UF</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="text" name="cidade" id="cidade">
-                <label for="cidade">Cidade</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="text" name="bairro" id="bairro">
-                <label for="bairro">Bairro</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="text" name="logradouro" id="logradouro">
-                <label for="logradouro">Logradouro</label>
             </div>
 
             <button type="submit" name="btn-cadastrar" id="btn-cadastrar" class="btn">Cadastrar</button>
