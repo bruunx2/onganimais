@@ -5,7 +5,8 @@ require_once '../db_connect.php';
 
 if(isset($_POST['btn-editar'])):
     $id = mysqli_escape_string($connect, $_POST['id']);
-    $nome = mysqli_escape_string($connect, $_POST['nome']);    
+    $nome = mysqli_escape_string($connect, $_POST['nome']); 
+    $data_nascimento = mysqli_escape_string($connect, $_POST['data_nascimento']);   
     $cpf = mysqli_escape_string($connect, $_POST['cpf']);
     $telefone = mysqli_escape_string($connect, $_POST['telefone']);
     $email = mysqli_escape_string($connect, $_POST['email']);
@@ -18,7 +19,8 @@ if(isset($_POST['btn-editar'])):
    
 
     $sql = "UPDATE funcionario SET 
-                                nome = '$nome',                               
+                                nome = '$nome',    
+                                data_nascimento = '$data_nascimento',                     
                                 cpf = '$cpf', 
                                 telefone = '$telefone',
                                 email = '$email',

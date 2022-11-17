@@ -15,17 +15,44 @@ function clear($input) {
 
 if(isset($_POST['btn-cadastrar'])):
     $nome = clear($_POST['nome']);
+    $data_nascimento = clear($_POST['data_nascimento']);
     $cpf = clear($_POST['cpf']);
     $telefone = clear($_POST['telefone']);
     $email = clear($_POST['email']);
-    $cep = clear($_POST['cep']);
     $logradouro = clear($_POST['logradouro']);
     $cidade = clear($_POST['cidade']);
     $bairro = clear($_POST['bairro']);
     $uf = clear($_POST['uf']);
+    $cep = clear($_POST['cep']);
     $cargo = clear($_POST['cargo']);
+
     
-    $sql = "INSERT INTO funcionario (nome, cpf, telefone, email, cep, logradouro, cidade, bairro, uf, cargo) VALUES ('$nome', '$cpf','$telefone','$email','$cep','$logradouro','$cidade','$bairro','$uf','$cargo')";    
+    $sql = "INSERT INTO funcionario (
+                            nome, 
+                            data_nascimento,
+                            cpf,
+                            telefone,
+                            email,
+                            logradouro,
+                            cidade,
+                            bairro,
+                            uf,
+                            cep,
+                            cargo
+                                ) VALUES (
+                                    '$nome',
+                                    '$data_nascimento',
+                                    '$cpf',
+                                    '$telefone',
+                                    '$email',
+                                    '$logradouro',
+                                    '$cidade',
+                                    '$bairro',
+                                    '$uf',
+                                    '$cep',
+                                    '$cargo'
+                                            )";
+ 
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso";
