@@ -72,7 +72,7 @@ include_once '../../includes/mensage.php';
                 ?>
         </table>
         <br>
-        <a href="create.php" class="btn">Adicionar AdotAdoçãoante</a>
+        <a href="create.php" class="btn">Adicionar Adoção</a>
 
         <?php
         // Footer

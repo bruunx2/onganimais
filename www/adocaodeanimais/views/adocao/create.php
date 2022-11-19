@@ -1,6 +1,8 @@
 <?php
 // Header
 include_once '../../includes/header.php';
+include_once '../../database/db_connect.php';
+
 ?>
 
 <div class="row"> 
@@ -13,18 +15,62 @@ include_once '../../includes/header.php';
             </div>
 
             <div class="input-field col s12">
-                <input type="text" name="id_adotante" id="id_adotante">
-                <label for="id_adotante">Adotante</label>
+                
+                <select name="adotante" id="adotante">
+                    
+                    <option  disabled selected>Escolha o adotante</option>
+               
+                    <?php
+                        $sql = "SELECT * FROM adotante;";
+                      
+                        $resultado = mysqli_query($connect, $sql);
+                    
+                        while($dados = mysqli_fetch_array($resultado)):
+                        
+                    ?>
+                    <option value="<?php echo $dados['id']; ?>"><?php echo $dados['nome']; 
+           
+                    ?></option>
+                    
+                    <?php
+                        endwhile;
+                    ?>
+                    
+
+                </select>
+            </div>
+
+
+            <div class="input-field col s12">
+                <select id="animal" name="animal">
+                    <option disabled selected>Escolha o animal</option>
+                    <?php
+                        $sql = "SELECT * FROM animal";
+                        $resultado = mysqli_query($connect, $sql);
+                        while($dados = mysqli_fetch_array($resultado)):
+                    ?>
+                    <option value="<?php echo $dados['id']; ?>"><?php echo $dados['nome']; ?></option>
+                    <?php
+                        endwhile;
+                    ?>
+                </select>
+                <label for="animal">Animal</label>
             </div>
 
             <div class="input-field col s12">
-                <input type="text" name="id_animal" id="id_animal">
-                <label for="id_animal">Animal</label>
-            </div>
-
-            <div class="input-field col s12">
-                <input type="text" name="id_funcioanrio" id="id_funcionario">
-                <label for="id_funcionario">Funcionario</label>
+                <select id="funcionario" name="funcionario">
+                    <option disabled selected>Escolha o funcionário</option>
+                    <?php
+                        $sql = "SELECT * FROM funcionario";
+                        $resultado = mysqli_query($connect, $sql);
+                        while($dados = mysqli_fetch_array($resultado)):
+                    ?>
+                    <option value="<?php echo $dados['id']; ?>"><?php echo $dados['nome']; ?></option>
+                    <?php
+                        endwhile;
+                    ?>
+                </select>
+                <label for="funcionario">Funcionário</label>
             </div>
         
             <button type="submit" name="btn-cadastrar" id="btn-cadastrar" class="btn">Cadastrar</button>
