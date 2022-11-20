@@ -11,7 +11,21 @@
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Dropdown Structure -->
+     
 </head>
+<body>
+<nav class="menu">
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="views/animal/list.php">Animais</a></li>
+      <li><a href="views/adocao/list.php">Adoções</a></li>
+      <li><a href="views/adotante/list.php">Adotantes</a></li>
+      <li><a href="views/funcionario/list.php">Funcionários</a></li>      
+    </ul>
+  </nav>
+
+</body>
 
 <!-- <script>
   function limpa_formulário_cep() {
