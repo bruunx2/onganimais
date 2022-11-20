@@ -13,6 +13,7 @@ include_once '../../includes/mensage.php';
         <table class="striped">
             <thead>
                 <tr>
+                    <th>ID da Adoção</th>
                     <th>Data Adoção</th>
                     <th>ID do adotante</th>
                     <th>ID do animal</th>
@@ -29,8 +30,9 @@ include_once '../../includes/mensage.php';
                     while ($dados = mysqli_fetch_array($resultado)) :
                 ?>
                         <tr>
+                            <td><?php echo $dados['id']; ?></td>
                             <td><?php echo $dados['data_adocao']; ?></td>
-                            <td><?php echo $dados['id_animal']; ?></td>
+                            <td><?php echo $dados['id_adotante']; ?></td>
                             <td><?php echo $dados['id_animal']; ?></td>
                             <td><?php echo $dados['id_funcionario']; ?></td>                        
 
@@ -62,6 +64,7 @@ include_once '../../includes/mensage.php';
                     ?>
 
                     <tr>
+                        <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>

@@ -20,7 +20,7 @@ if(isset($_POST['btn-cadastrar'])):
     $id_funcionario = clear($_POST['id_funcionario']);    
     
     
-    $sql = "INSERT INTO adocao (data_adocao,id_adotante, id_animal, id_funcionario)
+    $sql = "INSERT INTO adocao (data_adocao, id_adotante, id_animal, id_funcionario)
             VALUES ('$data_adocao','$id_adotante','$id_animal','$id_funcionario')";   
 
     if(mysqli_query($connect, $sql)):

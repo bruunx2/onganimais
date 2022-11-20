@@ -16,33 +16,23 @@ include_once '../../database/db_connect.php';
 
             <div class="input-field col s12">
                 
-                <select name="adotante" id="adotante">
-                    
-                    <option  disabled selected>Escolha o adotante</option>
-               
+                <select name="id_adotante" id="id_adotante">                    
+                    <option  disabled selected>Escolha o adotante</option>               
                     <?php
-                        $sql = "SELECT * FROM adotante;";
-                      
-                        $resultado = mysqli_query($connect, $sql);
-                    
-                        while($dados = mysqli_fetch_array($resultado)):
-                        
+                        $sql = "SELECT * FROM adotante;";                      
+                        $resultado = mysqli_query($connect, $sql);                    
+                        while($dados = mysqli_fetch_array($resultado)):                        
                     ?>
-                    <option value="<?php echo $dados['id']; ?>"><?php echo $dados['nome']; 
-           
-                    ?></option>
-                    
+                    <option value="<?php echo $dados['id']; ?>"><?php echo $dados['nome'];            
+                    ?></option>                    
                     <?php
                         endwhile;
-                    ?>
-                    
-
+                    ?>                   
                 </select>
             </div>
 
-
             <div class="input-field col s12">
-                <select id="animal" name="animal">
+                <select id="id_animal" name="id_animal">
                     <option disabled selected>Escolha o animal</option>
                     <?php
                         $sql = "SELECT * FROM animal";
@@ -58,7 +48,7 @@ include_once '../../database/db_connect.php';
             </div>
 
             <div class="input-field col s12">
-                <select id="funcionario" name="funcionario">
+                <select id="id_funcionario" name="id_funcionario">
                     <option disabled selected>Escolha o funcionário</option>
                     <?php
                         $sql = "SELECT * FROM funcionario";

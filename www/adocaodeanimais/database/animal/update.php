@@ -13,7 +13,14 @@ if(isset($_POST['btn-editar'])):
 
     $id = mysqli_escape_string($connect, $_POST['id']);
 
-    $sql = "UPDATE animal SET nome = '$nome', idade = '$idade', sexo = '$sexo', raca = '$raca', porte = '$porte' WHERE id = '$id'";
+    $sql = "UPDATE animal SET 
+                                nome = '$nome', 
+                                idade = '$idade', 
+                                sexo = '$sexo', 
+                                raca = '$raca', 
+                                porte = '$porte' 
+                                
+                                WHERE id = '$id'";
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Atualizado com Sucesso";
