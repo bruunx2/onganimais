@@ -17,11 +17,11 @@
 <body>
 <nav class="menu">
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="views/animal/list.php">Animais</a></li>
-      <li><a href="views/adocao/list.php">Adoções</a></li>
-      <li><a href="views/adotante/list.php">Adotantes</a></li>
-      <li><a href="views/funcionario/list.php">Funcionários</a></li>      
+      <li><a href="http://localhost:4500/adocaodeanimais/index.php">Home</a></li>
+      <li><a href="http://localhost:4500/adocaodeanimais/views/animal/list.php">Animais</a></li>
+      <li><a href="http://localhost:4500/adocaodeanimais/views/adocao/list.php">Adoções</a></li>
+      <li><a href="http://localhost:4500/adocaodeanimais/views/adotante/list.php">Adotantes</a></li>
+      <li><a href="http://localhost:4500/adocaodeanimais/views/funcionario/list.php">Funcionários</a></li>      
     </ul>
   </nav>
 
