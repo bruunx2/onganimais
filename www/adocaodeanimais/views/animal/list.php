@@ -18,20 +18,11 @@ include_once '../../includes/mensage.php';
                     <th>Sexo</th>
                     <th>Raça</th>
                     <th>Porte</th>
-                    <th>Doença</th>
                 </tr>
             </thead>
             <tbody>
             <?php
-                $sql = "SELECT 
-                    a.nome as animal,
-                    a.idade as idade,
-                    a.sexo as sexo,
-                    a.raca as raca,
-                    a.porte as porte,
-                    d.nome as doenca
-                    FROM animal a 
-                    JOIN doenca d ON a.id = d.id_animal";
+                $sql = "SELECT * FROM animal ";
                             
                 $resultado = mysqli_query($connect, $sql);
 
@@ -41,15 +32,14 @@ include_once '../../includes/mensage.php';
 
                 ?>
                 <?php 
-                echo '<pre>';
-                print_r ($dados)  ?>
+                // echo '<pre>';
+                // print_r ($dados)  ?>
                         <tr>
-                            <td><?php echo $dados['animal']; ?></td>
+                            <td><?php echo $dados['nome']; ?></td>
                             <td><?php echo $dados['idade']; ?></td>
                             <td><?php echo $dados['sexo']; ?></td>
                             <td><?php echo $dados['raca']; ?></td>
                             <td><?php echo $dados['porte']; ?></td>
-                            <td><?php echo $dados['doenca']; ?></td>
 
                             <td><a href="update.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
                             <td><a href="#modal <?php echo $dados['id']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
