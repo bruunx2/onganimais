@@ -5,6 +5,7 @@ include_once '../../database/db_connect.php';
 include_once '../../includes/header.php';
 // Mensagem
 include_once '../../includes/mensage.php';
+
 ?>
 
 <div class="row">
@@ -13,31 +14,41 @@ include_once '../../includes/mensage.php';
         <table class="striped">
             <thead>
                 <tr>
-                    <th>ID da Adoção</th>
+                    <th>Número</th>
                     <th>Data Adoção</th>
                     <th>Adotante</th>
                     <th>Animal</th>
-                    <th>Funcionario</th>                   
+                    <th>Cadastrado por</th>                   
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM adocao
-                JOIN adotante ON adotante.id = adocao.id_adotante
-                JOIN animal ON animal.id = adocao.id_animal
-                JOIN funcionario ON funcionario.id = adocao.id_funcionario";
+                $sql = "SELECT 
+                            adocao.id_adocao as id, 
+                            adocao.data_adocao as data_adocao,
+                            adotante.nome as adotante,
+                            animal.nome as animal,
+                            funcionario.nome as funcionario
+                            FROM adocao
+                            JOIN adotante ON adotante.id = adocao.id_adotante
+                            JOIN animal ON animal.id = adocao.id_animal
+                            JOIN funcionario ON funcionario.id = adocao.id_funcionario";
                 $resultado = mysqli_query($connect, $sql);
 
                 if (mysqli_num_rows($resultado) > 0) :
 
                     while ($dados = mysqli_fetch_array($resultado)) :
+
                 ?>
+                <?php 
+                // echo '<pre>';
+                // print_r ($dados)  ?>
                         <tr>
                             <td><?php echo $dados['id']; ?></td>
                             <td><?php echo $dados['data_adocao']; ?></td>
-                            <td><?php echo $dados['id_adotante']; ?></td>
-                            <td><?php echo $dados['id_animal']; ?></td>
-                            <td><?php echo $dados['id_funcionario']; ?></td>                        
+                            <td><?php echo $dados['adotante']; ?></td>
+                            <td><?php echo $dados['animal']; ?></td>
+                            <td><?php echo $dados['funcionario']; ?></td>                        
 
                             <td><a href="update.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
                             <td><a href="#modal <?php echo $dados['id']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
