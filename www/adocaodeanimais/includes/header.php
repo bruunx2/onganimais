@@ -21,6 +21,7 @@
       <li><a href="http://localhost:4500/adocaodeanimais/views/animal/list.php">Animais</a></li>
       <li><a href="http://localhost:4500/adocaodeanimais/views/adocao/list.php">Adoções</a></li>
       <li><a href="http://localhost:4500/adocaodeanimais/views/adotante/list.php">Adotantes</a></li>
+      <li><a href="http://localhost:4500/adocaodeanimais/views/doenca/list.php">Doenças</a></li>
       <li><a href="http://localhost:4500/adocaodeanimais/views/funcionario/list.php">Funcionários</a></li>      
     </ul>
   </nav>

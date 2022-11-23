@@ -42,6 +42,21 @@ endif;
                 <input type="text" name="porte" id="porte" value="<?php echo $dados['porte']; ?>">
                 <label for="porte">Porte</label>
             </div>
+            <div class="input-field col s12">
+                <select id="id_doenca" name="id_doenca">
+                    <option disabled selected>Escolha a Doença</option>
+                    <?php
+                        $sql = "SELECT * FROM doenca";
+                        $resultado = mysqli_query($connect, $sql);
+                        while($dados = mysqli_fetch_array($resultado)):
+                    ?>
+                    <option value="<?php echo $dados['id']; ?>"><?php echo $dados['nome']; ?></option>
+                    <?php
+                        endwhile;
+                    ?>
+                </select>
+                <label for="doenca">Doença</label>
+            </div>
 
             <button type="submit" name="btn-editar" id="btn-editar" class="btn">Atualizar</button>
             <a href="list.php" class="btn green">Lista de Animais</a>

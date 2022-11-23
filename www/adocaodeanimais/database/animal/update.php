@@ -10,6 +10,7 @@ if(isset($_POST['btn-editar'])):
     $sexo = mysqli_escape_string($connect, $_POST['sexo']);
     $raca = mysqli_escape_string($connect, $_POST['raca']);
     $porte = mysqli_escape_string($connect, $_POST['porte']);
+    $id_doenca = mysqli_escape_string($connect, $_POST['id_doenca']);
 
     $id = mysqli_escape_string($connect, $_POST['id']);
 
@@ -18,7 +19,8 @@ if(isset($_POST['btn-editar'])):
                                 idade = '$idade', 
                                 sexo = '$sexo', 
                                 raca = '$raca', 
-                                porte = '$porte' 
+                                porte = '$porte',
+                                id_doenca = '$id_doenca' 
                                 
                                 WHERE id = '$id'";
 

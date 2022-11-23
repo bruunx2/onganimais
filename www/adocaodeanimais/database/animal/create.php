@@ -19,19 +19,22 @@ if(isset($_POST['btn-cadastrar'])):
     $sexo = clear($_POST['sexo']);
     $raca = clear($_POST['raca']);
     $porte = clear($_POST['porte']);
+    $id_doenca = clear($_POST['id_doenca']);
     
     $sql = "INSERT INTO animal (
                             nome, 
                             idade, 
                             sexo, 
                             raca, 
-                            porte
+                            porte,
+                            id_doenca
                                 ) VALUES (
                                         '$nome', 
                                         '$idade', 
                                         '$sexo',
                                         '$raca',
-                                        '$porte'
+                                        '$porte',
+                                        '$id_doenca'
                                              )";    
 
     if(mysqli_query($connect, $sql)):

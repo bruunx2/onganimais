@@ -24,7 +24,7 @@ include_once '../../includes/mensage.php';
             <tbody>
                 <?php
                 $sql = "SELECT 
-                            adocao.id_adocao as id, 
+                            adocao.id as id, 
                             adocao.data_adocao as data_adocao,
                             adotante.nome as adotante,
                             animal.nome as animal,

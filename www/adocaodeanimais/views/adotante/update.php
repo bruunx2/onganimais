@@ -58,7 +58,7 @@
             </div>
 
             <button type="submit" name="btn-editar" id="btn-editar" class="btn">Atualizar</button>
-            <a href="list.php" class="btn green">Lista de Animais</a>
+            <a href="list.php" class="btn green">Lista de Adotantes</a>
         </form>
         
     </div>
