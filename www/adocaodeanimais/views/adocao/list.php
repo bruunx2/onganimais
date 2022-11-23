@@ -17,27 +17,27 @@ include_once '../../includes/mensage.php';
                     <th>Data Adoção</th>
                     <th>Adotante</th>
                     <th>Animal</th>
-                    <th>Funcionario</th>
+                    <th>Funcionario</th>                   
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT adocao.* FROM 
-                            JOIN adotante ON adotante.id = adocao.id_adotante
-                            JOIN animal ON animal.id = adocao.id_animal
-                            JOIN funcionario ON funcionario.id = adocao.id_funcionario";
+                $sql = "SELECT * FROM adocao
+                JOIN adotante ON adotante.id = adocao.id_adotante
+                JOIN animal ON animal.id = adocao.id_animal
+                JOIN funcionario ON funcionario.id = adocao.id_funcionario";
                 $resultado = mysqli_query($connect, $sql);
+
                 if (mysqli_num_rows($resultado) > 0) :
 
                     while ($dados = mysqli_fetch_array($resultado)) :
-                        echo ($dados = mysqli_fetch_array($resultado))
                 ?>
                         <tr>
                             <td><?php echo $dados['id']; ?></td>
                             <td><?php echo $dados['data_adocao']; ?></td>
                             <td><?php echo $dados['id_adotante']; ?></td>
                             <td><?php echo $dados['id_animal']; ?></td>
-                            <td><?php echo $dados['id_funcionario']; ?></td>
+                            <td><?php echo $dados['id_funcionario']; ?></td>                        
 
                             <td><a href="update.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
                             <td><a href="#modal <?php echo $dados['id']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
@@ -71,7 +71,7 @@ include_once '../../includes/mensage.php';
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>-</td>
+                        <td>-</td>                        
                     </tr>
                 <?php
                 endif;
