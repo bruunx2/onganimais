@@ -12,14 +12,23 @@ include_once 'includes/header.php';
     <title>Document</title>    
 </head>
 <body>
-    <section class="form-container">
-        <div class="container">
-            <form action="">
+    <!-- <section class="form-container"> -->
+        <div >
+            <h3 style="position: absolute;  z-index: 1; padding-left: 18%;">
+            Seja bem vindo ao sistema da nossa ONG!
+            </h3>
+          
+            <!-- <h3 style="position: absolute;  z-index: 1; padding-left: 40%;"> -->
+            <!-- Aqui você pode cadastrar animais, adotantes, funcionários e doenças. -->
+            <!-- </h3> -->
+            <img src="src/app/img/animais.jpg" style= "position:relative;" width="1366px" height="565px">
+
+            <!-- <form action="">
                 <h1>Bem vindo ao sistema de cadastro de animais</h1>
                 <p>Sistema criado para ajudar no cadastro de animais, serviço disponibilizado gratuitamente para ongs</p>                
-            </form>
+            </form> -->
         </div>        
-    </section>
+    <!-- </section> -->
 </body>
 
 

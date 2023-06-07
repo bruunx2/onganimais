@@ -16,13 +16,12 @@
                 <input type="text" name="cpf" id="cpf">
                 <label for="cpf">CPF</label>
             </div>
-            <!-- TODO Diminuir input -->
             <div class="input-field col s6 ">
                 <input type="text" name="telefone" id="telefone">
                 <label for="telefone">Telefone</label>
             </div>
             <div class="input-field col s6 ">
-                <input type="text" name="email" id="email">
+                <input type="email" name="email" id="email">
                 <label for="email">Email</label>
             </div>
             <div class="input-field col s8">

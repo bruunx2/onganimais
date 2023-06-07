@@ -33,7 +33,7 @@
                 <label for="telefone">Telefone</label>
             </div>
             <div class="input-field col s6">
-                <input type="text" name="email" id="email" value="<?php echo $dados['email']; ?>">
+                <input type="email" name="email" id="email" value="<?php echo $dados['email']; ?>">
                 <label for="email">Email</label>
             </div>
             <div class="input-field col s6">

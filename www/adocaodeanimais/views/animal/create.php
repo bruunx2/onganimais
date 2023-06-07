@@ -13,17 +13,17 @@ include_once '../../database/db_connect.php';
                 <label for="nome">Nome</label>
             </div>
 
-            <div class="input-field col s12">
+            <div class="input-field col s3">
                 <input type="number" name="idade" id="idade">
                 <label for="idade">Idade</label>
             </div>
 
-            <div class="input-field col s12">
+            <div class="input-field col s3">
                 <input type="text" name="sexo" id="sexo">
                 <label for="sexo">Sexo</label>
             </div>
 
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <input type="text" name="raca" id="raca">
                 <label for="raca">Raça</label>
             </div>          
